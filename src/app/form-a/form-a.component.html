@@ -1,0 +1,31 @@
+<div class="container border">
+    <form action="" >
+            <div class="row p-5">
+            <div class="form-group col-sm-12 col-md-6 ">
+                <label for="fName">First Name</label>
+                <input type="text" id="fName" class="form-control" formControlName="fName">
+            </div>
+            <div class="form-group col-sm-12 col-md-6">
+                <label for="lName">Last Name</label>
+                <input type="text" id="lName" class="form-control" formControlName="lName">
+            </div>
+            <div class="form-group col-sm-12 col-md-6">
+                <label for="inputState">How should we contact you?</label>
+                <select id="inputState" class="form-control"(click)="selectOption($event)" >
+                    <option selected >Choose Option</option>
+                    <option #email >Email</option>
+                    <option #phone >Phone</option>
+                </select>
+            </div>
+            <div class="form-group col-sm-12 col-md-6" *ngIf="emailVal">
+                <label for="inputEmail4">Email Address</label>
+                <input type="email" class="form-control" id="inputEmail4">
+            </div>
+            <div class="form-group col-sm-12 col-md-6" *ngIf="phoneVal" >
+                <label for="inputEmail4">Phone Number</label>
+                <input type="number" class="form-control" id="inputEmail4">
+            </div>
+            
+        </div>
+        </form>
+</div>
